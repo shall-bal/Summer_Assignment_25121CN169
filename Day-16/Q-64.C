@@ -10,14 +10,20 @@ int main() {
     for(i = 0; i < n; i++)
         scanf("%d", &a[i]);
 
-    printf("Duplicates: ");
+    printf("Array without duplicates: ");
+
     for(i = 0; i < n; i++) {
-        for(j = i + 1; j < n; j++) {
+        int duplicate = 0;
+
+        for(j = 0; j < i; j++) {
             if(a[i] == a[j]) {
-                printf("%d ", a[i]);
+                duplicate = 1;
                 break;
             }
         }
+
+        if(!duplicate)
+            printf("%d ", a[i]);
     }
 
     return 0;

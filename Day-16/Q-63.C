@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int a[100], n, i, key, count = 0;
+    int a[100], n, i, j, sum;
 
     printf("Enter size: ");
     scanf("%d", &n);
@@ -10,15 +10,15 @@ int main() {
     for(i = 0; i < n; i++)
         scanf("%d", &a[i]);
 
-    printf("Enter element: ");
-    scanf("%d", &key);
+    printf("Enter sum: ");
+    scanf("%d", &sum);
 
     for(i = 0; i < n; i++) {
-        if(a[i] == key)
-            count++;
+        for(j = i + 1; j < n; j++) {
+            if(a[i] + a[j] == sum)
+                printf("%d %d\n", a[i], a[j]);
+        }
     }
-
-    printf("Frequency = %d", count);
 
     return 0;
 }

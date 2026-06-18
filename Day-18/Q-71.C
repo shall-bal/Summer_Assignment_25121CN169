@@ -1,23 +1,32 @@
 #include <stdio.h>
 
 int main() {
-    int a[100], n, i, key, found = 0;
+    int a[100], n, i, key;
+    int low = 0, high, mid, found = 0;
 
     printf("Enter size: ");
     scanf("%d", &n);
 
-    printf("Enter elements: ");
+    printf("Enter sorted elements: ");
     for(i = 0; i < n; i++)
         scanf("%d", &a[i]);
 
     printf("Enter element to search: ");
     scanf("%d", &key);
 
-    for(i = 0; i < n; i++) {
-        if(a[i] == key) {
+    high = n - 1;
+
+    while(low <= high) {
+        mid = (low + high) / 2;
+
+        if(a[mid] == key) {
             found = 1;
             break;
         }
+        else if(a[mid] < key)
+            low = mid + 1;
+        else
+            high = mid - 1;
     }
 
     if(found)

@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    int a[100], n, i, sum = 0;
-    float avg;
+    int a[100], n, i, sum = 0, total;
 
-    printf("Enter size: ");
+    printf("Enter size (n-1): ");
     scanf("%d", &n);
 
     printf("Enter elements: ");
@@ -13,10 +12,9 @@ int main() {
         sum += a[i];
     }
 
-    avg = (float)sum / n;
+    total = (n + 1) * (n + 2) / 2;
 
-    printf("Sum = %d\n", sum);
-    printf("Average = %.2f", avg);
+    printf("Missing number = %d", total - sum);
 
     return 0;
 }
