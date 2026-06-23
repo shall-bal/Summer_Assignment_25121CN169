@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int m1, m2, m3, total;
+    float percent;
+
+    printf("Enter marks of 3 subjects: ");
+    scanf("%d %d %d", &m1, &m2, &m3);
+
+    total = m1 + m2 + m3;
+    percent = total / 3.0;
+
+    printf("\nMarksheet\n");
+    printf("Total = %d\n", total);
+    printf("Percentage = %.2f\n", percent);
+
+    if(percent >= 40)
+        printf("Result = Pass");
+    else
+        printf("Result = Fail");
+
+    return 0;
+}
