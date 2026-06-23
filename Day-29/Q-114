@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int a[100], n, i, choice, sum = 0;
+
+    printf("Enter size: ");
+    scanf("%d", &n);
+
+    printf("Enter elements: ");
+    for(i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    printf("1.Display\n2.Sum\n");
+    printf("Enter choice: ");
+    scanf("%d", &choice);
+
+    if(choice == 1) {
+        printf("Array: ");
+        for(i = 0; i < n; i++)
+            printf("%d ", a[i]);
+    }
+    else if(choice == 2) {
+        for(i = 0; i < n; i++)
+            sum += a[i];
+
+        printf("Sum = %d", sum);
+    }
+    else {
+        printf("Invalid Choice");
+    }
+
+    return 0;
+}
