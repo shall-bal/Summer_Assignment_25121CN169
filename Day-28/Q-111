@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+struct Ticket {
+    char name[50];
+    int seats;
+};
+
+int main() {
+    struct Ticket t;
+
+    printf("Enter Name: ");
+    scanf("%s", t.name);
+
+    printf("Enter Number of Seats: ");
+    scanf("%d", &t.seats);
+
+    printf("\nTicket Booked Successfully\n");
+    printf("Name: %s\n", t.name);
+    printf("Seats: %d\n", t.seats);
+
+    return 0;
+}
