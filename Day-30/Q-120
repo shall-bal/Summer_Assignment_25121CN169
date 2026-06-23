@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void display(char name[][20], int marks[], int n) {
+    int i;
+    printf("\nStudent Records\n");
+    for(i = 0; i < n; i++)
+        printf("%s - %d\n", name[i], marks[i]);
+}
+
+int main() {
+    char name[3][20];
+    int marks[3], i;
+
+    for(i = 0; i < 3; i++) {
+        printf("Enter name: ");
+        scanf("%s", name[i]);
+
+        printf("Enter marks: ");
+        scanf("%d", &marks[i]);
+    }
+
+    display(name, marks, 3);
+
+    return 0;
+}

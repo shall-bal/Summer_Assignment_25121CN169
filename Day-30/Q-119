@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char name[3][20] = {"Rahul", "Aman", "Riya"};
+    int salary[3] = {25000, 30000, 28000};
+    int i;
+
+    printf("Employee Records:\n");
+
+    for(i = 0; i < 3; i++)
+        printf("%s - %d\n", name[i], salary[i]);
+
+    return 0;
+}

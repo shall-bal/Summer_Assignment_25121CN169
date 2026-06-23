@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    char books[3][20] = {"C", "Java", "Python"};
+    int i;
+
+    printf("Books in Library:\n");
+
+    for(i = 0; i < 3; i++)
+        printf("%d. %s\n", i + 1, books[i]);
+
+    return 0;
+}
